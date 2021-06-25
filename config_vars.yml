@@ -1,0 +1,8 @@
+devices:
+  - R1:
+    interfaces:
+      - ethernet0/1:
+        ipv4:
+          addr: 1.1.1.1/24
+        enable: true
+        description: "This interace configured by Ansible"
