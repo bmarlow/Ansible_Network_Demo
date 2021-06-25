@@ -1,0 +1,15 @@
+---
+
+- name: Network Getting Started First Playbook Extended
+  connection: ansible.netcommon.network_cli
+  gather_facts: false
+  hosts: all
+  tasks:
+
+    - name: Get facts about device
+      cisco.ios.ios_facts:
+        gather_subset: all
+
+    - name: Print facts about device
+      ansible.builtin.debug:
+        var: hostvars[inventory_hostname]
